@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demonn-4cc090d2-2c86-4ab5-881a-18d2aa37873a-deployment
+  labels:
+    app: demonn-4cc090d2-2c86-4ab5-881a-18d2aa37873a
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: demonn-4cc090d2-2c86-4ab5-881a-18d2aa37873a
+  template:
+    metadata:
+      labels:
+        app: demonn-4cc090d2-2c86-4ab5-881a-18d2aa37873a
+    spec:
+      containers:
+        - name: demonn-4cc090d2-2c86-4ab5-881a-18d2aa37873a-container
+          image: pipejet/sovannlyna-demonn:1
+          ports:
+            - containerPort: 8080
