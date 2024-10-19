@@ -1,19 +1,19 @@
-# apiVersion: networking.k8s.io/v1
-# kind: Ingress
-# metadata:
-#   name: demonn-4cc090d2-2c86-4ab5-881a-18d2aa37873a-ingress
-#   namespace: demonn-4cc090d2-2c86-4ab5-881a-18d2aa37873a
-#   annotations:
-#     kubernetes.io/ingress.class: nginx
-# spec:
-#   rules:
-#   - host: manuth-leler.tinhlgkiddy.fun
-#     http:
-#       paths:
-#       - path: /
-#         pathType: Prefix  
-#         backend:
-#           service:
-#             name: demonn-4cc090d2-2c86-4ab5-881a-18d2aa37873a-service 
-#             port:
-#               number: 8081
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: demonn-4cc090d2-2c86-4ab5-881a-18d2aa37873a-ingress
+  namespace: demonn-4cc090d2-2c86-4ab5-881a-18d2aa37873a
+  annotations:
+    kubernetes.io/ingress.class: nginx
+spec:
+  rules:
+  - host: manuth-leler.tinhlgkiddy.fun
+    http:
+      paths:
+      - path: /
+        pathType: Prefix  
+        backend:
+          service:
+            name: demonn-4cc090d2-2c86-4ab5-881a-18d2aa37873a-service 
+            port:
+              number: 8081
